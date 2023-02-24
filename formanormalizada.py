@@ -26,9 +26,9 @@ mantisaB = int(input("Ingresa la cantidad de bits de la mantisa: "))
 expB = int(input("Ingresa la cantidad de bits que se le asignan al exp: "))
 
 if num >= 0:
-    signo = 0
+    signo = "0"
 else:
-    signo = 1
+    signo = "1"
 
 listBin = list(dectobin(num))
 
@@ -57,4 +57,41 @@ else:
 numero = "".join(listBin)
 print(f"Forma normalizada de punto flotante es {numero}x2**{e}")
 
+exp = dectobin(position)
 
+
+#Rellena con ceros el número de bits de el exp.
+if len(exp) < expB:
+    for i in range(0, expB - len(exp)):
+        exp = list(exp)
+        exp.insert(0,"0")
+    exp = "".join(exp)
+
+
+#Eliminar el entero de la mantisa.
+mantisaList = []
+numero  = list(numero)
+for i in range (2,len(numero)):
+    mantisaList.append(numero[i])
+mantisa = "".join(mantisaList)
+
+
+#Rellenar con ceros la mantisa.
+if len(mantisa) < mantisaB:
+    for i in range(0, mantisaB - len(mantisa)):
+        mantisa = list(mantisa)
+        mantisa.insert(0,"0")
+    mantisa = "".join(mantisa)
+
+#limita las cifras de la mantisa a la cantidad ingresada.
+if(len(mantisa) > mantisaB):
+    ret = len(mantisa) - mantisaB
+    ret = ret - (ret*2)
+    mantisa = mantisa[:ret]
+
+
+#Calcular el exponente en binario.
+exp = dectobin(int((2**expB - 1) / 2) + e)
+
+NF = signo + " " + exp + " " + mantisa
+print(NF)
