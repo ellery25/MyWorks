@@ -1,0 +1,192 @@
+body{
+    margin: 40px;
+}
+#titulo {
+    color: tomato;
+}
+
+p.especial {
+    color: mediumseagreen;
+}
+
+p.texto {
+    color: slateblue;
+}
+
+div p { /*COMMENT*/
+    color: aquamarine;
+}
+
+div h2, div h3 {
+    color: brown;
+}
+
+*{
+    font-size: 24px;
+    /* color: black; */ /*COMMENT*/
+}
+
+/*This is a comment*/
+/*
+This is a comment
+*/
+
+/*.color {
+    color: #ff0000;
+}
+
+.color {
+    color: rgb(0, 255, 255);
+}
+
+*/
+
+.color {
+
+    /* border: 5px red outset; */
+    /*
+    dotted
+    dashed
+    solid
+    double
+    groove
+    ridge
+    insed
+    outset
+    none
+    hidden
+    */
+
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+
+#fondo {
+    background-color: rgba(255, 0, 0);
+    opacity: 0.3;
+    height: 400px;
+    background: #f00 url(img/background.jfif) repeat-y center bottom / 100px 100px;
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 1px black;
+    height: 100px;
+    width: 50px;
+    overflow: scroll;
+    outline: 1px solid rebeccapurple;
+}
+
+.text {
+    font-family: 'Aboreto', sans-serif;
+    text-align: justify;
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px blueviolet;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: red;
+}
+
+/*active va despues de hover y hover despues de visited etc. */
+
+ul {
+    background-color: cyan;
+    list-style-type: georgian;
+    /* padding-left: 0;  */
+    /* ist-style-position: inside; */
+
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span {
+     display: block; 
+    /* visibility: hidden; */
+    max-width: 500px;
+    background-color: lemonchiffon;
+}
+
+.inline {
+    display: inline;
+}
+
+#position {
+    position: sticky;
+    left: 20px;
+    /* top: 25px;  */
+}
+
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0px;
+    padding: 10px 0px;
+    width: 33.3%;
+}
+
+.inline-block {
+    display: inline-block;
+    height: 55px;
+    background-color: aquamarine;
+}
+
+.center {
+    padding: 50px 0px;
+    width: 200px;
+    margin: 0px auto;
+    background-color: aqua;
+    text-align: center;
+}

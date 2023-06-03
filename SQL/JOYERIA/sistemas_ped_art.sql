@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: sistemas
+-- ------------------------------------------------------
+-- Server version	8.0.31
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ped_art`
+--
+
+DROP TABLE IF EXISTS `ped_art`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ped_art` (
+  `Cod_Ped` int NOT NULL,
+  `Cod_Art` int NOT NULL,
+  `CantXArt` int DEFAULT NULL,
+  `PrecioTotalArt` int DEFAULT NULL,
+  PRIMARY KEY (`Cod_Ped`,`Cod_Art`),
+  KEY `Ped_Art_fk1` (`Cod_Art`),
+  CONSTRAINT `Ped_Art_fk0` FOREIGN KEY (`Cod_Ped`) REFERENCES `pedido` (`Cod_Ped`),
+  CONSTRAINT `Ped_Art_fk1` FOREIGN KEY (`Cod_Art`) REFERENCES `articulo` (`Cod_Art`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ped_art`
+--
+
+LOCK TABLES `ped_art` WRITE;
+/*!40000 ALTER TABLE `ped_art` DISABLE KEYS */;
+INSERT INTO `ped_art` VALUES (1,20021,1,350000),(1,20023,1,150000),(2,20022,1,300000),(2,20033,2,220000),(3,20020,1,1750000),(3,20022,1,300000),(3,20031,2,400000);
+/*!40000 ALTER TABLE `ped_art` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-11-21  0:22:30

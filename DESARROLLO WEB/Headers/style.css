@@ -1,0 +1,87 @@
+html{
+    font-family: 'Karla', sans-serif;
+}
+body{
+    background-color: white;
+    margin: 0;
+    text-align: center;
+    justify-content: space-around;
+}
+header{
+    padding: 1em 1em;
+    background-color: dimgrey;
+    color: aliceblue;
+}
+
+#TITLE {
+    margin: 1em;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#CSS {
+    padding-left: 65%;
+    padding-top: 1.5em;
+}
+
+#HTML {
+    padding-right: 2em;
+    padding-top: 1.5em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: color 0.3s ease;
+    color: cornflowerblue;
+}
+
+.container {
+    width: auto;
+    margin: 0px 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.post1 {
+    width: fit-content;
+    transition: box-shadow 0.3s ease;
+    margin: 1em;
+    padding: 10px;
+    border-style: ridge;
+    cursor: pointer;
+}
+
+section div:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.foot {
+    background-color: darkgrey;
+    margin: 0em;
+    text-align: left;
+}
+
+footer {
+    padding: 1em 1em;
+    background-color: dimgrey;
+    color: white;
+}
+
+#copyright {
+    background-color: dimgrey;
+
+}
+
+

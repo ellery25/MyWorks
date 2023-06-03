@@ -1,0 +1,4 @@
+com\mycompany\flyweight\FlyWeightConcreto.class
+com\mycompany\flyweight\FlyWeightFactory.class
+com\mycompany\flyweight\Cliente.class
+com\mycompany\flyweight\FlyWeight.class

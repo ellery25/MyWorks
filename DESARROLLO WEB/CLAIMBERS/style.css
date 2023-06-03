@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #BDC4A7;
+}
+
+a{
+    text-decoration: none;
+}
+
+.claim__header a {
+    color: #BDC4A7;
+}
+
+a:hover {
+    transition: ease 1.3s;
+    color: #B5D6B2;
+}
+
+.claim__header{
+    color: #BDC4A7;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #2F2F2F;
+    padding: 0 100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ 
